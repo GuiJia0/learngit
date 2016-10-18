@@ -28,3 +28,16 @@ Git checkout - - file 把文件在工作区的修改撤销，一种是还没add�
 4.	rm file 删除工作区的文件。
 5.	git rm file  git commit 删除版本库的文件
 6.	git check out - - file 从版本库检出到工作区(如果版本库的文件被删除，则无法检出)。
+第三部分：
+1.	创建远程仓库：
+ ssh-keygen -t rsa -C “yourEmail”
+然后一路回车。
+2.cd ~/.ssh 进入.ssh目录打开id_rsa.pub
+3.在github的 SSH key中键入id_rsa.pub 
+中的内容.
+4.也就是说如果在不同的电脑登陆，就需要生成不同的公钥添加在SSH key中。
+5.登陆github  “create a new repo” 比如仓库名叫learngit ，web会自动生成一个地址，然后进入自己的工作区 输入:
+ Git remote add origin + “生成的地址”；
+7.	把本地库推送到远程库：
+Git push –u origin master 
+然后会提示SSH警告，这是第一次使用clone或者push命令连接时出现的。
