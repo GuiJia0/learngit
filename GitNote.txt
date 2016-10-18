@@ -19,7 +19,7 @@ Git reflog 记录每一次命令
 
 
 第二部分：
-仓库同时也是工作区，.git隐藏文件是版本库，其中有个文件叫index(stage),是暂存区，还有git自动创建的第一个分支master，以及指向master的一个指针HEAD。
+仓库同时也是工作区, .git隐藏文件是版本库，其中有个文件叫index(stage),是暂存区，还有git自动创建的第一个分支master，以及指向master的一个指针HEAD。
   Git add指令是把文件添加到暂存区，git commit是吧暂存区的文件提交到当前分支，所以git status命令检查的是工作区。
 Git checkout - - file 把文件在工作区的修改撤销，一种是还没add的文件现在还原到版本库一样的状态，一种是已经add的文件又做了修改，恢复到添加到暂存区后的状态。
 1.	当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用git checkout - -file
